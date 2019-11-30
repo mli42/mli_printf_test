@@ -6,12 +6,12 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 16:13:17 by mli               #+#    #+#             */
-/*   Updated: 2019/11/30 13:20:03 by mli              ###   ########.fr       */
+/*   Updated: 2019/11/30 13:39:22 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h"
 # include <stdio.h>
+int				ft_printf(const char *str, ...);
 
 int		main(void)
 {
@@ -29,6 +29,7 @@ int		main(void)
 	char r2[] = {'1', '2', '3', '4', '5'};
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%s\n", r));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%.s\n", r));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%.s\n", 42));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%.0s\n", r));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%.3s\n", r));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%.3s\n", r2));
@@ -66,9 +67,9 @@ int		main(void)
 	//				%p	 		//
 	int	a = 5;
 	ft_printf("\t\t||\tTESTS FOR %%P\t||\n");
-	ft_printf("||Returned: %d ||\n\n", ft_printf("%p\n", &a));
-	ft_printf("||Returned: %d ||\n\n", ft_printf("%20p\n", &a));
-	ft_printf("||Returned: %d ||\n\n", ft_printf("%-20p\n", &a));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %p\n", &a));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %20p\n", &a));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %-20p\n", &a));
 
 	//			%di				//
 	// Basics
