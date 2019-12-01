@@ -116,14 +116,29 @@ $
      000000080000000$
 ||Returned: 21 ||$
 $
+$
+||Returned: 1 ||$
+$
+                    $
+||Returned: 21 ||$
+$
+00000000000000000000$
+||Returned: 21 ||$
+$
+0                   $
+||Returned: 21 ||$
+$
+                   0$
+||Returned: 21 ||$
+$
 		||	TESTS FOR %P	||$
-Address 0x7ffeed4939cc$
+Address 0x7ffeee594a28$
 ||Returned: 23 ||$
 $
-Address       0x7ffeed4939cc$
+Address       0x7ffeebedca28$
 ||Returned: 29 ||$
 $
-Address 0x7ffeed4939cc      $
+Address 0x7ffee0039a28      $
 ||Returned: 29 ||$
 $
 		||	TESTS FOR %D & I + Parsing	||$
@@ -133,8 +148,8 @@ $
 123456$
 ||Returned: 7 ||$
 $
-4294843840$
-||Returned: 11 ||$
+-123456$
+||Returned: 8 ||$
 $
 0$
 ||Returned: 2 ||$
@@ -142,40 +157,40 @@ $
 123456$
 ||Returned: 7 ||$
 $
-4294843840$
-||Returned: 11 ||$
+-123456$
+||Returned: 8 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-1$
+||Returned: 3 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-1$
+||Returned: 3 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-1$
+||Returned: 3 ||$
 $
-4294967295$
-||Returned: 11 ||$
+ -1$
+||Returned: 4 ||$
 $
-4294967295$
-||Returned: 11 ||$
+  -1$
+||Returned: 5 ||$
 $
-     000004294967295$
+    -000000000000001$
 ||Returned: 21 ||$
 $
-     000004294967295$
+    -000000000000001$
 ||Returned: 21 ||$
 $
-000004294967173     $
+-000000000000123    $
 ||Returned: 21 ||$
 $
 2147483647$
 ||Returned: 11 ||$
 $
-2147483648$
-||Returned: 11 ||$
+-2147483648$
+||Returned: 12 ||$
 $
-     000002147483648$
+    -000002147483648$
 ||Returned: 21 ||$
 $
 $
@@ -193,14 +208,14 @@ $
                    0$
 ||Returned: 21 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-001$
+||Returned: 5 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-1  $
+||Returned: 5 ||$
 $
-4294967295$
-||Returned: 11 ||$
+-1  $
+||Returned: 5 ||$
 $
 00132$
 ||Returned: 6 ||$

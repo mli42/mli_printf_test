@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 16:13:17 by mli               #+#    #+#             */
-/*   Updated: 2019/11/30 13:39:22 by mli              ###   ########.fr       */
+/*   Updated: 2019/12/01 23:11:36 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		main(void)
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%*.*X\n", -20, 15, -2147483647));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%*.*X\n", -20, 15, -1));
 
+	// Parsing
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%*.*X\n", -20, 15, -123456));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%.*X\n", 15, -123456));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%*X\n", -20, -123456));
@@ -64,12 +65,18 @@ int		main(void)
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%3x\n", 123456));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%020.15x\n", -2147483647 - 1));
 
+	// When 0
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%.x\n", 0));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%20.x\n", 0));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%020x\n", 0));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%-20x\n", 0));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("%20x\n", 0));
+
 	//				%p	 		//
-	int	a = 5;
 	ft_printf("\t\t||\tTESTS FOR %%P\t||\n");
-	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %p\n", &a));
-	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %20p\n", &a));
-	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %-20p\n", &a));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %p\n", 140732897249832));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %20p\n", 140732856650280));
+	ft_printf("||Returned: %d ||\n\n", ft_printf("Address %-20p\n", 140732656753192));
 
 	//			%di				//
 	// Basics
@@ -147,5 +154,6 @@ int		main(void)
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%010%\n"));
 	ft_printf("||Returned: %d ||\n\n", ft_printf("%-10%\n"));
 
+//	while (1);
 	return (0);
 }
