@@ -6,7 +6,7 @@
 /*   By: mli <mli@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 16:13:17 by mli               #+#    #+#             */
-/*   Updated: 2021/03/25 12:33:35 by mli              ###   ########.fr       */
+/*   Updated: 2021/03/25 14:59:22 by mli              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	ft_test(const int line, const int ret)
 {
 	static int i = 0;
 
-	FT_PRINTF("[%d][line: %d] || Returned: %d ||\n\n", i++, line, ret);
+	FT_PRINTF("[%d][line: %d] || Returned: %d ||\n", i++, line, ret);
 }
 
 int		main(void)
 {
 // #################################### %c #####################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%C\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%C\t||\n\n");
 	ft_test(__LINE__, FT_PRINTF("%c\n", 'r'));
 	ft_test(__LINE__, FT_PRINTF("%c\n", -142));
 	ft_test(__LINE__, FT_PRINTF("%20c\n", -142));
@@ -37,7 +37,7 @@ int		main(void)
 	ft_test(__LINE__, FT_PRINTF("Just printing ok : %c and %c !\n", 'o', 'k'));
 
 // #################################### %s #####################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%S\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%S\t||\n\n");
 	char r[] = {'1', '2', '3', '4', '5', '\0'};
 	char r2[] = {'1', '2', '3', '4', '5'};
 	ft_test(__LINE__, FT_PRINTF("%s\n", r));
@@ -53,7 +53,7 @@ int		main(void)
 	ft_test(__LINE__, FT_PRINTF("%s %-30.3s %s\n", r, NULL, NULL));
 
 // ################################## %xX && * #################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%xX and Parsing with *\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%xX and Parsing with *\t||\n\n");
 	ft_test(__LINE__, FT_PRINTF("%20.15X\n", 2147483647));
 	ft_test(__LINE__, FT_PRINTF("%-20.15X\n", 2147483647));
 	ft_test(__LINE__, FT_PRINTF("%020.15X\n", 2147483647));
@@ -85,14 +85,14 @@ int		main(void)
 	ft_test(__LINE__, FT_PRINTF("\t%20x\n", 0));
 
 // #################################### %p #####################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%p\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%p\t||\n\n");
 	ft_test(__LINE__, FT_PRINTF("\tAddress %p\n", (void *)140732897249832));
 	ft_test(__LINE__, FT_PRINTF("\tAddress %20p\n", (void *)140732856650280));
 	ft_test(__LINE__, FT_PRINTF("\tAddress %-20p\n", (void *)140732656753192));
 
 // ################################### %di #####################################
 	// Basics
-	FT_PRINTF("\t\t||\tTESTS FOR %%D & I + Parsing\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%D & I + Parsing\t||\n\n");
 	ft_test(__LINE__, FT_PRINTF("\t%d\n", 0));
 	ft_test(__LINE__, FT_PRINTF("\t%d\n", 123456));
 	ft_test(__LINE__, FT_PRINTF("\t%d\n", -123456));
@@ -131,7 +131,7 @@ int		main(void)
 	ft_test(__LINE__, FT_PRINTF("\t%.0005d\n", 132));
 
 // #################################### %u #####################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%U\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%U\t||\n\n");
 	// Basics
 	ft_test(__LINE__, FT_PRINTF("\t%u\n", 0));
 	ft_test(__LINE__, FT_PRINTF("\t%u\n", 123456));
@@ -159,7 +159,7 @@ int		main(void)
 	ft_test(__LINE__, FT_PRINTF("\t%u\n", -21447));
 
 // #################################### %% #####################################
-	FT_PRINTF("\t\t||\tTESTS FOR %%%%\t||\n");
+	FT_PRINTF("\n\t\t||\tTESTS FOR %%%%\t||\n\n");
 	ft_test(__LINE__, FT_PRINTF("\t%.10%\n"));
 	ft_test(__LINE__, FT_PRINTF("\t%10%\n"));
 	ft_test(__LINE__, FT_PRINTF("\t%010%\n"));
